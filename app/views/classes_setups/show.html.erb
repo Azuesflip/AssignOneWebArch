@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @classes_setup.name %>
+</p>
+
+<p>
+  <strong>Area of study:</strong>
+  <%= @classes_setup.area_of_study %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @classes_setup.area_id %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @classes_setup.description %>
+</p>
+
+<%= link_to 'Edit', edit_classes_setup_path(@classes_setup) %> |
+<%= link_to 'Back', classes_setups_path %>

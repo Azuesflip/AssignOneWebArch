@@ -1,0 +1,2 @@
+module ClassesSetupsHelper
+end
