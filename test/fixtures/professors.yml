@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  age: 
+  age: 1
   gender: MyString
 
 two:
   name: MyString
-  age: 
+  age: 1
   gender: MyString

@@ -3,11 +3,11 @@
 one:
   name: MyString
   area_of_study: MyString
-  area_id: 
+  area_id: 1
   description: MyText
 
 two:
   name: MyString
   area_of_study: MyString
-  area_id: 
+  area_id: 1
   description: MyText
