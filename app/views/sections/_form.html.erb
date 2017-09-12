@@ -12,13 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :section_number %>
-    <%= form.number_field :section_number, id: :section_section_number %>
-  </div>
-
-  <div class="field">
-    <%= form.label :semester %>
-    <%= form.text_field :semester, id: :section_semester %>
+    <%= form.label :number %>
+    <%= form.number_field :number, id: :section_number %>
   </div>
 
   <div class="field">
@@ -27,13 +22,23 @@
   </div>
 
   <div class="field">
-    <%= form.label :Professor_id %>
-    <%= form.text_field :Professor_id, id: :section_Professor_id %>
+    <%= form.label :building %>
+    <%= form.text_field :building, id: :section_building %>
   </div>
 
   <div class="field">
-    <%= form.label :ClassesSetup_id %>
-    <%= form.text_field :ClassesSetup_id, id: :section_ClassesSetup_id %>
+    <%= form.label :time %>
+    <%= form.datetime_select :time, id: :section_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :professor_id %>
+    <%= form.number_field :professor_id, id: :section_professor_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :course_id %>
+    <%= form.number_field :course_id, id: :section_course_id %>
   </div>
 
   <div class="actions">

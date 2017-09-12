@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170907184004) do
+ActiveRecord::Schema.define(version: 20170912225624) do
 
   create_table "classes_setups", force: :cascade do |t|
     t.string "name"
     t.string "area_of_study"
     t.integer "area_id"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.string "name"
+    t.string "field_of_study"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -30,15 +38,16 @@ ActiveRecord::Schema.define(version: 20170907184004) do
   end
 
   create_table "sections", force: :cascade do |t|
-    t.integer "section_number"
-    t.string "semester"
+    t.integer "number"
     t.integer "room_number"
-    t.integer "Professor_id"
-    t.integer "ClassesSetup_id"
+    t.string "building"
+    t.datetime "time"
+    t.integer "professor_id"
+    t.integer "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["ClassesSetup_id"], name: "index_sections_on_ClassesSetup_id"
-    t.index ["Professor_id"], name: "index_sections_on_Professor_id"
+    t.index ["course_id"], name: "index_sections_on_course_id"
+    t.index ["professor_id"], name: "index_sections_on_professor_id"
   end
 
 end

@@ -1,13 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Section number:</strong>
-  <%= @section.section_number %>
-</p>
-
-<p>
-  <strong>Semester:</strong>
-  <%= @section.semester %>
+  <strong>Number:</strong>
+  <%= @section.number %>
 </p>
 
 <p>
@@ -16,13 +11,23 @@
 </p>
 
 <p>
-  <strong>Professor:</strong>
-  <%= @section.Professor %>
+  <strong>Building:</strong>
+  <%= @section.building %>
 </p>
 
 <p>
-  <strong>Classessetup:</strong>
-  <%= @section.ClassesSetup %>
+  <strong>Time:</strong>
+  <%= @section.time %>
+</p>
+
+<p>
+  <strong>Professor:</strong>
+  <%= @section.professor.name %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @section.course.name %>
 </p>
 
 <%= link_to 'Edit', edit_section_path(@section) %> |

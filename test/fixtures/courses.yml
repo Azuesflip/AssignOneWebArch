@@ -2,12 +2,10 @@
 
 one:
   name: MyString
-  area_of_study: MyString
-  area_id: 1
+  field_of_study: MyString
   description: MyText
 
 two:
   name: MyString
-  area_of_study: MyString
-  area_id: 1
+  field_of_study: MyString
   description: MyText

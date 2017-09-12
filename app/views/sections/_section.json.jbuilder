@@ -1,2 +1,2 @@
-json.extract! section, :id, :section_number, :semester, :room_number, :Professor_id, :ClassesSetup_id, :created_at, :updated_at
+json.extract! section, :id, :number, :room_number, :building, :time, :professor_id, :course_id, :created_at, :updated_at
 json.url section_url(section, format: :json)
