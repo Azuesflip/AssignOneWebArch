@@ -61,6 +61,11 @@ class SectionsController < ApplicationController
     end
   end
 
+  def search
+    @sections = Section.joins(:professor).joins(:course).where("number LIKE :q OR room_number LIKE :q OR building LIKE :q OR time LIKE :q OR professors.name LIKE :q OR courses.name LIKE :q", q: "%#{params[:q]}%")
+    render :index
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_section
