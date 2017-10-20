@@ -1,3 +1,5 @@
+<%= javascript_include_tag 'nav', 'data-turbolinks-track': 'reload' %>
+
 <section class="navigation">
   <div class="nav-container">
     <nav>
@@ -15,7 +17,7 @@
         	<%= link_to "Sections", sections_path %>
         </li>
         <li>
-          <a>User</a>
+          <a href="#!">User</a>
           <ul class="nav-dropdown">
             <li>
               <%= link_to "Login", new_user_session_path %>
