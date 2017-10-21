@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :enrollments
+  resources :students
   	devise_for :users
 	root "sections#index"
 	resources :sections do
