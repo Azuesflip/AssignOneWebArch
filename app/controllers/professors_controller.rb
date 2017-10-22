@@ -5,6 +5,7 @@ class ProfessorsController < ApplicationController
   # GET /professors.json
   def index
     @professors = Professor.all
+    @enrollments = Enrollment.all
   end
 
   # GET /professors/1
