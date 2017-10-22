@@ -25,6 +25,26 @@
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <table>
+            <thead>
+              <tr>
+                <th>Section</th>
+                <th>Professor</th>
+                <th colspan="2"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @enrollments.each do |enrollment| %>
+                <% if enrollment.student.id == student.id %>
+                  <tr>
+                    <td><%= enrollment.section.number %></td>
+                    <td><%= enrollment.section.professor.name %></td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+          </table>
       </tr>
     <% end %>
   </tbody>
